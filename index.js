@@ -26,27 +26,22 @@ function App() {
         <div className="card">
           <div className="card-header">Quotes</div>
           <div className="card-body">
-				{randomQuote ? (
-					<>
-					<p className="card-text">"{randomQuote.text}"</p>
-					<h5 className="card-title">- {randomQuote.author || "Unkown"}</h5>
-					</>
-				):(
-					<h2>Loading</h2>
-				)}
-				<div className="row">
-					<div className="col">
+				    {randomQuote ? (
+					    <>
+					    <p className="card-text">"{randomQuote.text}"</p>
+					    <h5 className="card-title">- {randomQuote.author || "Unkown"}</h5>
+					    </>
+				    ):(
+					    <h2>Loading</h2>
+				    )}
+				
 						<button onClick={getNewQuote} className="btn btn-primary">New Quote</button>
-					</div>
-					<div className="col">
 						<a href="" className="btn btn-warning">
 							<i className="fa fa-twitter"></i>
 						</a>
-					</div>
-					<div className="col">
-						<a href="" className="btn btn-danger"></a>
-					</div>
-				</div>
+						<a href="" className="btn btn-danger">
+              <i className="fa fa-tumblr"></i>
+            </a>
           </div>
         </div>
       </div>
